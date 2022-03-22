@@ -9,6 +9,7 @@ public class MergeAlgorithm {
     // orderOfSets = false ---> ascending order (smallest to largest)
     // orderOfSets = true ---> descending order (largest to smallest)
     boolean orderOfSets = false;
+    boolean orderOfFinalSet = false;
 
     // Example struct of sets: setA = [1, 2, 6, 9, 15, 16, 18, 19], setB = [4, 10, 15, 20]
     public MergeAlgorithm(Integer[] setA, Integer[] setB){ // TODO -- Only integers or floats too? -- Check
@@ -17,7 +18,7 @@ public class MergeAlgorithm {
     }
 
     // Example struct of sets: setA = [29, 24, 23, 22, 9, 3], setB = [30, 28, 24, 16, 15, 13]
-    public MergeAlgorithm(Integer[] setA, Integer[] setB, boolean orderOfSets){ // TODO -- Only integers or floats too? -- Check
+    public MergeAlgorithm(Integer[] setA, Integer[] setB, boolean orderOfSets, boolean orderOfFinalSet){ // TODO -- Only integers or floats too? -- Check
         if (orderOfSets) {
             invertArray(setA);
             invertArray(setB);
@@ -26,6 +27,7 @@ public class MergeAlgorithm {
         this.setA = checkRepeatedNumbers(setA, setB);
         this.setB = setB;
         this.orderOfSets = orderOfSets;
+        this.orderOfFinalSet = orderOfFinalSet;
     }
 
     public Integer[] merge(){
@@ -51,7 +53,7 @@ public class MergeAlgorithm {
             }
         }
 
-        if (orderOfSets)
+        if (orderOfFinalSet)
             invertArray(orderedArray);
 
         return orderedArray;
