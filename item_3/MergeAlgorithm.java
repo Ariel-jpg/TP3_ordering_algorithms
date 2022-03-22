@@ -3,7 +3,7 @@ package item_3;
 import java.util.Arrays;
 import java.util.Objects;
 
-public class Merge_algorithm {
+public class MergeAlgorithm {
     private Integer[] setA, setB;
 
     // orderOfSets = false ---> ascending order (smallest to largest)
@@ -11,13 +11,13 @@ public class Merge_algorithm {
     boolean orderOfSets = false;
 
     // Example struct of sets: setA = [1, 2, 6, 9, 15, 16, 18, 19], setB = [4, 10, 15, 20]
-    public Merge_algorithm(Integer[] setA, Integer[] setB){ // TODO -- Only integers or floats too? -- Check
+    public MergeAlgorithm(Integer[] setA, Integer[] setB){ // TODO -- Only integers or floats too? -- Check
         this.setA = checkRepeatedNumbers(setA, setB);
         this.setB = setB;
     }
 
     // Example struct of sets: setA = [29, 24, 23, 22, 9, 3], setB = [30, 28, 24, 16, 15, 13]
-    public Merge_algorithm(Integer[] setA, Integer[] setB, boolean orderOfSets){ // TODO -- Only integers or floats too? -- Check
+    public MergeAlgorithm(Integer[] setA, Integer[] setB, boolean orderOfSets){ // TODO -- Only integers or floats too? -- Check
         if (orderOfSets) {
             invertArray(setA);
             invertArray(setB);
