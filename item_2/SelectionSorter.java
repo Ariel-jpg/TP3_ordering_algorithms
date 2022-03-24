@@ -1,10 +1,10 @@
-package TP3_ordering_algorithms.item_2;
+package item_2;
 
 /*Este algoritmo busca el numero maximo en un arreglo y lo intercambia de lugar
 con el primer numero no ordenado, luego ignora las posisiones ya ordenadas y vuelve
 a repetir el primer paso*/
 
-public class SelectionSorter implements Sorter{
+public class SelectionSorter implements TP3_ordering_algorithms.item_2.Sorter {
     @Override
     public void sort(Integer[] array) {
         for(int i = 0; i < array.length -1; i++){

@@ -1,9 +1,9 @@
-package TP3_ordering_algorithms.item_2;
+package item_2;
 
 /* Este algoritmo recorre posision por posision un arreglo. Si el numero es mayor al que le
 sigue continua, si el numero es menor los intercambia.*/
 
-public class BubbleSorter implements Sorter{
+public class BubbleSorter implements TP3_ordering_algorithms.item_2.Sorter {
     @Override
     public void sort(Integer[] array) {
         int correctCounter = 0;
